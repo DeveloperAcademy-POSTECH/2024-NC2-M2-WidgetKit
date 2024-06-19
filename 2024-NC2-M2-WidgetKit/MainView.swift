@@ -7,6 +7,8 @@ struct MainView: View {
     @State private var isAnimating = false
     @AppStorage("selectedImage") var selectedImage: String = ""
     
+    
+    
     // imageName의 2차원 배열
     var imageName = [
         ["mouse", "cow", "tiger"],
@@ -16,48 +18,52 @@ struct MainView: View {
     ]
     
     var body: some View {
-        
-        VStack{
-            
-            HeaderView()
-            
-            ZStack {
-                // 십이간지가 그려진 버튼
-                VStack {
-                    ForEach(0 ..< 4) { height in
-                        HStack {
-                            ForEach(0 ..< 3) { width in
-                                Button(action: {
-                                    self.selectedImage = imageName[height][width]
-                                    self.showToast = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                        self.showToast = false   
-                                    }
-                                    WidgetCenter.shared.reloadAllTimelines()
-                                }, label: {
-                                    VStack {
-                                        Image(imageName[height][width])
-                                            .resizable()
-                                            .frame(width: 100, height: 100)
-                                        Text("\(imageName[height][width])")
-                                    }
-                                })
+        ScrollView {
+            VStack{
+                
+                HeaderView()
+                
+                ZStack {
+                    // 십이간지가 그려진 버튼
+                    VStack {
+                        ForEach(0 ..< 4) { height in
+                            HStack {
+                                ForEach(0 ..< 3) { width in
+                                    Button(action: {
+                                        self.selectedImage = imageName[height][width]
+                                        self.showToast = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                            self.showToast = false
+                                        }
+                                        WidgetCenter.shared.reloadAllTimelines()
+                                    }, label: {
+                                        VStack {
+                                            Image(imageName[height][width])
+                                                .resizable()
+                                                .frame(width: 100, height: 100)
+                                            Text("\(imageName[height][width])")
+                                        }
+                                    })
+                                }
                             }
+                            
                         }
-                        
                     }
-                }
-                if showToast {
-                    ToastView(message: "This is a Toast message")
-                        .transition(.slide)
-                        .animation(.easeInOut(duration: 0.5), value: isAnimating)
+                    if showToast {
+                        ToastView(message: "This is a Toast message")
+                            .transition(.slide)
+                            .animation(.easeInOut(duration: 0.5), value: isAnimating)
+                    }
                 }
             }
         }
     }
-    
-    
 }
+
+
+
+
+
 
 
 struct ToastView: View {

@@ -1,0 +1,11 @@
+//
+//  APIKey.xcconfig
+//  2024-NC2-M2-WidgetKit
+//
+//  Created by 이소현 on 6/19/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+Gemini_API_Key = AIzaSyBdfTcQVtjfC5BzDLenkQOwWJTQtFSp7HE

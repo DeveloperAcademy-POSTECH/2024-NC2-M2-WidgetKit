@@ -1,14 +1,16 @@
 
+import ActivityKit
 import WidgetKit
 import SwiftUI
+import AppIntents
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent(), imageName: getSelectedImage())
+        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent(), imageName: getSelectedImage(), geminiFortune: getGeminiFortune())
     }
     
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration, imageName: getSelectedImage())
+        SimpleEntry(date: Date(), configuration: configuration, imageName: getSelectedImage(), geminiFortune: getGeminiFortune())
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
@@ -18,8 +20,8 @@ struct Provider: AppIntentTimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-//            let imageName = UserDefaults(suiteName: "group.com.soy.TodayFortune")?.string(forKey: "selectedImage") ?? "placeholder"
-            let entry = SimpleEntry(date: entryDate, configuration: configuration, imageName: getSelectedImage())
+            //            let imageName = UserDefaults(suiteName: "group.com.soy.TodayFortune")?.string(forKey: "selectedImage") ?? "placeholder"
+            let entry = SimpleEntry(date: entryDate, configuration: configuration, imageName: getSelectedImage(), geminiFortune: getGeminiFortune())
             entries.append(entry)
         }
         
@@ -30,13 +32,19 @@ struct Provider: AppIntentTimelineProvider {
         let defaults = UserDefaults(suiteName: "group.com.soy.TodayFortune")
         return defaults?.string(forKey: "selectedImage") ?? "placeholder"
     }
-
+    
+    private func getGeminiFortune() -> String {
+        let defaults = UserDefaults(suiteName: "group.com.soy.TodayFortune")
+        return defaults?.string(forKey: "geminiFortune") ?? "placeholder"
+    }
+    
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationAppIntent
     let imageName: String
+    let geminiFortune: String
 }
 
 struct TodayFortuneEntryView : View {
@@ -49,14 +57,14 @@ struct TodayFortuneEntryView : View {
                 .scaledToFit()
             Text(entry.imageName)
                 .font(.headline)
-            
-//            Button(intent: Text("HI")) {
-//                
-//            }
+            Text(entry.geminiFortune)
+                .fontWeight(.thin)
+                .font(.footnote)
         }
         .padding()
     }
 }
+
 
 struct TodayFortune: Widget {
     let kind: String = "TodayFortune"
@@ -69,13 +77,16 @@ struct TodayFortune: Widget {
     }
 }
 
+
+
+
 //extension ConfigurationAppIntent {
 //    fileprivate static var smiley: ConfigurationAppIntent {
 //        let intent = ConfigurationAppIntent()
 //        intent.favoriteEmoji = "😀"
 //        return intent
 //    }
-//    
+//
 //    fileprivate static var starEyes: ConfigurationAppIntent {
 //        let intent = ConfigurationAppIntent()
 //        intent.favoriteEmoji = "🤩"

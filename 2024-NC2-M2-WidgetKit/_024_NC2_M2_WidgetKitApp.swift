@@ -11,6 +11,7 @@ struct _024_NC2_M2_WidgetKitApp: App {
             } else {
                 Text("Failed to load UserDefaults")
             }
+            
         }
     }
 }

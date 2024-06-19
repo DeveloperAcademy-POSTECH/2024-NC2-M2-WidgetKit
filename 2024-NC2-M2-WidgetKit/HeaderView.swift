@@ -18,6 +18,7 @@ struct HeaderView: View {
         }
     }
 }
+//소이 짱짱걸
 
 #Preview {
     HeaderView()

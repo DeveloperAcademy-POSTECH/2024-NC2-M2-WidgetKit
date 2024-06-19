@@ -8,17 +8,63 @@
 
 /* Begin PBXBuildFile section */
 		934F231C2C1FC9CA009CB30E /* _024_NC2_M2_WidgetKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F231B2C1FC9CA009CB30E /* _024_NC2_M2_WidgetKitApp.swift */; };
-		934F231E2C1FC9CA009CB30E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F231D2C1FC9CA009CB30E /* ContentView.swift */; };
 		934F23202C1FC9CC009CB30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934F231F2C1FC9CC009CB30E /* Assets.xcassets */; };
 		934F23232C1FC9CC009CB30E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934F23222C1FC9CC009CB30E /* Preview Assets.xcassets */; };
+		934F23302C1FD25B009CB30E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934F232F2C1FD25B009CB30E /* WidgetKit.framework */; };
+		934F23322C1FD25B009CB30E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934F23312C1FD25B009CB30E /* SwiftUI.framework */; };
+		934F23352C1FD25B009CB30E /* TodayFortuneBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F23342C1FD25B009CB30E /* TodayFortuneBundle.swift */; };
+		934F23372C1FD25B009CB30E /* TodayFortuneLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F23362C1FD25B009CB30E /* TodayFortuneLiveActivity.swift */; };
+		934F23392C1FD25B009CB30E /* TodayFortune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F23382C1FD25B009CB30E /* TodayFortune.swift */; };
+		934F233B2C1FD25B009CB30E /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F233A2C1FD25B009CB30E /* AppIntent.swift */; };
+		934F233D2C1FD25C009CB30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934F233C2C1FD25C009CB30E /* Assets.xcassets */; };
+		934F23412C1FD25C009CB30E /* TodayFortuneExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 934F232D2C1FD25B009CB30E /* TodayFortuneExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		934F23472C1FD393009CB30E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F23462C1FD393009CB30E /* MainView.swift */; };
+		934F23492C1FE0BF009CB30E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F23482C1FE0BF009CB30E /* HeaderView.swift */; };
+		934F23872C210F2C009CB30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934F231F2C1FC9CC009CB30E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		934F233F2C1FD25C009CB30E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 934F23102C1FC9CA009CB30E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 934F232C2C1FD25B009CB30E;
+			remoteInfo = TodayFortuneExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		934F23452C1FD25C009CB30E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				934F23412C1FD25C009CB30E /* TodayFortuneExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		934F23182C1FC9CA009CB30E /* 2024-NC2-M2-WidgetKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2024-NC2-M2-WidgetKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		934F231B2C1FC9CA009CB30E /* _024_NC2_M2_WidgetKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _024_NC2_M2_WidgetKitApp.swift; sourceTree = "<group>"; };
-		934F231D2C1FC9CA009CB30E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		934F231F2C1FC9CC009CB30E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		934F23222C1FC9CC009CB30E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		934F232D2C1FD25B009CB30E /* TodayFortuneExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayFortuneExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		934F232F2C1FD25B009CB30E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		934F23312C1FD25B009CB30E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		934F23342C1FD25B009CB30E /* TodayFortuneBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFortuneBundle.swift; sourceTree = "<group>"; };
+		934F23362C1FD25B009CB30E /* TodayFortuneLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFortuneLiveActivity.swift; sourceTree = "<group>"; };
+		934F23382C1FD25B009CB30E /* TodayFortune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFortune.swift; sourceTree = "<group>"; };
+		934F233A2C1FD25B009CB30E /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		934F233C2C1FD25C009CB30E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		934F233E2C1FD25C009CB30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		934F23462C1FD393009CB30E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		934F23482C1FE0BF009CB30E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		934F234A2C201F46009CB30E /* TodayFortuneExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayFortuneExtension.entitlements; sourceTree = "<group>"; };
+		934F234D2C2050CE009CB30E /* 2024-NC2-M2-WidgetKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "2024-NC2-M2-WidgetKit.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,13 +75,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		934F232A2C1FD25B009CB30E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				934F23322C1FD25B009CB30E /* SwiftUI.framework in Frameworks */,
+				934F23302C1FD25B009CB30E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		934F230F2C1FC9CA009CB30E = {
 			isa = PBXGroup;
 			children = (
+				934F234A2C201F46009CB30E /* TodayFortuneExtension.entitlements */,
 				934F231A2C1FC9CA009CB30E /* 2024-NC2-M2-WidgetKit */,
+				934F23332C1FD25B009CB30E /* TodayFortune */,
+				934F232E2C1FD25B009CB30E /* Frameworks */,
 				934F23192C1FC9CA009CB30E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				934F23182C1FC9CA009CB30E /* 2024-NC2-M2-WidgetKit.app */,
+				934F232D2C1FD25B009CB30E /* TodayFortuneExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,8 +110,10 @@
 		934F231A2C1FC9CA009CB30E /* 2024-NC2-M2-WidgetKit */ = {
 			isa = PBXGroup;
 			children = (
+				934F234D2C2050CE009CB30E /* 2024-NC2-M2-WidgetKit.entitlements */,
 				934F231B2C1FC9CA009CB30E /* _024_NC2_M2_WidgetKitApp.swift */,
-				934F231D2C1FC9CA009CB30E /* ContentView.swift */,
+				934F23462C1FD393009CB30E /* MainView.swift */,
+				934F23482C1FE0BF009CB30E /* HeaderView.swift */,
 				934F231F2C1FC9CC009CB30E /* Assets.xcassets */,
 				934F23212C1FC9CC009CB30E /* Preview Content */,
 			);
@@ -67,6 +128,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		934F232E2C1FD25B009CB30E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				934F232F2C1FD25B009CB30E /* WidgetKit.framework */,
+				934F23312C1FD25B009CB30E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		934F23332C1FD25B009CB30E /* TodayFortune */ = {
+			isa = PBXGroup;
+			children = (
+				934F23342C1FD25B009CB30E /* TodayFortuneBundle.swift */,
+				934F23362C1FD25B009CB30E /* TodayFortuneLiveActivity.swift */,
+				934F23382C1FD25B009CB30E /* TodayFortune.swift */,
+				934F233A2C1FD25B009CB30E /* AppIntent.swift */,
+				934F233C2C1FD25C009CB30E /* Assets.xcassets */,
+				934F233E2C1FD25C009CB30E /* Info.plist */,
+			);
+			path = TodayFortune;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +160,34 @@
 				934F23142C1FC9CA009CB30E /* Sources */,
 				934F23152C1FC9CA009CB30E /* Frameworks */,
 				934F23162C1FC9CA009CB30E /* Resources */,
+				934F23452C1FD25C009CB30E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				934F23402C1FD25C009CB30E /* PBXTargetDependency */,
 			);
 			name = "2024-NC2-M2-WidgetKit";
 			productName = "2024-NC2-M2-WidgetKit";
 			productReference = 934F23182C1FC9CA009CB30E /* 2024-NC2-M2-WidgetKit.app */;
 			productType = "com.apple.product-type.application";
+		};
+		934F232C2C1FD25B009CB30E /* TodayFortuneExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 934F23422C1FD25C009CB30E /* Build configuration list for PBXNativeTarget "TodayFortuneExtension" */;
+			buildPhases = (
+				934F23292C1FD25B009CB30E /* Sources */,
+				934F232A2C1FD25B009CB30E /* Frameworks */,
+				934F232B2C1FD25B009CB30E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayFortuneExtension;
+			productName = TodayFortuneExtension;
+			productReference = 934F232D2C1FD25B009CB30E /* TodayFortuneExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +200,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					934F23172C1FC9CA009CB30E = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					934F232C2C1FD25B009CB30E = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -116,6 +221,7 @@
 			projectRoot = "";
 			targets = (
 				934F23172C1FC9CA009CB30E /* 2024-NC2-M2-WidgetKit */,
+				934F232C2C1FD25B009CB30E /* TodayFortuneExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +236,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		934F232B2C1FD25B009CB30E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				934F23872C210F2C009CB30E /* Assets.xcassets in Resources */,
+				934F233D2C1FD25C009CB30E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +252,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				934F231E2C1FC9CA009CB30E /* ContentView.swift in Sources */,
+				934F23472C1FD393009CB30E /* MainView.swift in Sources */,
 				934F231C2C1FC9CA009CB30E /* _024_NC2_M2_WidgetKitApp.swift in Sources */,
+				934F23492C1FE0BF009CB30E /* HeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		934F23292C1FD25B009CB30E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				934F23392C1FD25B009CB30E /* TodayFortune.swift in Sources */,
+				934F233B2C1FD25B009CB30E /* AppIntent.swift in Sources */,
+				934F23372C1FD25B009CB30E /* TodayFortuneLiveActivity.swift in Sources */,
+				934F23352C1FD25B009CB30E /* TodayFortuneBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		934F23402C1FD25C009CB30E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 934F232C2C1FD25B009CB30E /* TodayFortuneExtension */;
+			targetProxy = 934F233F2C1FD25C009CB30E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		934F23242C1FC9CC009CB30E /* Debug */ = {
@@ -267,8 +402,10 @@
 		934F23272C1FC9CC009CB30E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "2024-NC2-M2-WidgetKit/2024-NC2-M2-WidgetKit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"2024-NC2-M2-WidgetKit/Preview Content\"";
@@ -296,8 +433,10 @@
 		934F23282C1FC9CC009CB30E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "2024-NC2-M2-WidgetKit/2024-NC2-M2-WidgetKit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"2024-NC2-M2-WidgetKit/Preview Content\"";
@@ -322,6 +461,62 @@
 			};
 			name = Release;
 		};
+		934F23432C1FD25C009CB30E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TodayFortuneExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 223UXY9RY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodayFortune/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TodayFortune;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Soy.-024-NC2-M2-WidgetKit.TodayFortune";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		934F23442C1FD25C009CB30E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TodayFortuneExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 223UXY9RY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodayFortune/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TodayFortune;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Soy.-024-NC2-M2-WidgetKit.TodayFortune";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +534,15 @@
 			buildConfigurations = (
 				934F23272C1FC9CC009CB30E /* Debug */,
 				934F23282C1FC9CC009CB30E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		934F23422C1FD25C009CB30E /* Build configuration list for PBXNativeTarget "TodayFortuneExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				934F23432C1FD25C009CB30E /* Debug */,
+				934F23442C1FD25C009CB30E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

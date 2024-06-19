@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "스크린샷 2024-06-17 오후 3.01.56.png",
+      "filename" : "snake.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "snake_2.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "snake_3.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

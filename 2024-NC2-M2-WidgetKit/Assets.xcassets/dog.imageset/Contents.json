@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "스크린샷 2024-06-17 오후 3.02.09.png",
+      "filename" : "dog.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "dog_2.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "dog_3.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

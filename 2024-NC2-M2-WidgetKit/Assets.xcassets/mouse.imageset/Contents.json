@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "스크린샷 2024-06-17 오후 3.01.03.png",
+      "filename" : "mouse.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "mouse_2.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "mouse_3.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

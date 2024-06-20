@@ -37,7 +37,6 @@ struct ToggleFortuneIntent: AppIntent {
 Button(intent: ToggleFortuneIntent()){
   if !entry.isShowingFortune { ... } else { ... }
 }
-}
 ```
 Interactivity를 추가하기 위해선 AppIntent가 필요함. 
 AppIntent는 iOS가 필요할 때, 예를 들어 사용자가 위젯 버튼과 상호작용할 때 App 작업을 시스템에 노출하는 역할을 수행.

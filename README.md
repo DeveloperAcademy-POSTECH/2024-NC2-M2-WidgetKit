@@ -18,6 +18,7 @@ Apple Developer Academy 3rd Morning Session NC2 Pair2(Soy&amp;Sora - SOSO)'s Wid
 ## 🖼️ Prototype
 
 - 위젯 이미지 (WidgetFamily: .systemSmall, .systemLarge / .systemMedium)
+위젯을 설치했을 때 기본적으로 나타나는 화면
 </br>
 <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/f737efc0-a842-444b-bc95-de3ba8507d08" width = "200" height = "200"> | <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/8f416b35-6795-45b1-a1d0-7a6c9d2f1a2e" width = "200" height = "100">
 

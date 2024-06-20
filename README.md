@@ -20,11 +20,12 @@ Apple Developer Academy 3rd Morning Session NC2 Pair2(Soy&amp;Sora - SOSO)'s Wid
 - 위젯 이미지 (WidgetFamily: .systemSmall, .systemLarge / .systemMedium)
 </br>
 <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/f737efc0-a842-444b-bc95-de3ba8507d08" width = "200" height = "200"> | <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/8f416b35-6795-45b1-a1d0-7a6c9d2f1a2e" width = "200" height = "100">
----|---|
+
+</br>
 </br>
 
-
 - HeaderView : 오늘의 운세가 나타나는 View
+
 </br>
 </br>
 <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/af7e6c6d-2518-44ac-8a98-554690500c4b" >

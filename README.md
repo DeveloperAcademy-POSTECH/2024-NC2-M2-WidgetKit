@@ -6,7 +6,7 @@ Apple Developer Academy 3rd Morning Session NC2 Pair2(Soy&amp;Sora - SOSO)'s Wid
 
 ## 💡 About WidgetKit
 
-> WwDC23부터 WidgetKit은 Interactivity를 지원, 사용자가 앱을 실행하지 않고도 위젯 내에서 직접 작업이 가능하도록 지원한다는 것을 알게 됨 </br> 'Button', 'Link', 'AppIntent' 컴포넌트를 활용하여 항목을 완료로 표시하거나 설정을 전환하는 등의 작업이 가능함 </br> Interactivitive Widget은 사용자의 행동에 따라 콘텐츠를 새로 고칠 수 있어 Apple 기기에서 더 풍부하고 몰입감 있는 경험을 제공한다는 것을 배울 수 있었음
+> WwDC23부터 WidgetKit은 Interactivity를 지원, 사용자가 앱을 실행하지 않고도 위젯 내에서 직접 작업이 가능하도록 지원한다. </br> 'Button', 'Link', 'AppIntent' 컴포넌트를 활용하여 항목을 완료로 표시하거나 설정을 전환하는 등의 작업이 가능하다. </br> Interactivitive Widget은 사용자의 행동에 따라 콘텐츠를 새로 고칠 수 있어 Apple 기기에서 더 풍부하고 몰입감 있는 경험을 제공한다.
 
 ## 🎯 What we focus on?
 > WidgetKit에서 iOS17부터 제공하는 interactivity를 활용해 앱을 실행하지 않고도 앱의 기능을 사용할 수 있도록 한다.

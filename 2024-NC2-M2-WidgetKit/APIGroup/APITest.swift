@@ -67,8 +67,8 @@ struct APITestView: View {
                 .padding()
         }
         .padding()
-        .onAppear {
-            apiModel.fetchGemini(prompt: inputText)
+        .task {
+            await apiModel.fetchGemini(prompt: inputText)
         }
     }
 }

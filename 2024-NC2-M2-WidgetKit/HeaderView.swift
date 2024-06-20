@@ -3,6 +3,7 @@ import Foundation
 import SwiftUI
 import Combine
 import GoogleGenerativeAI
+import WidgetKit
 
 struct APIKey {
     static var value: String {
@@ -23,48 +24,52 @@ class APIModel: ObservableObject {
         self.model = GenerativeModel(name: "gemini-1.5-flash", apiKey: APIKey.value)
     }
     
-    func fetchGemini(prompt: String) {
-        Task {
-            do {
-                let response = try await model.generateContent(prompt)
-                if let text = response.text {
-                    DispatchQueue.main.async {
-                        self.storyText = text
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.storyText = "Failed to load Gemini."
-                    }
-                }
-            } catch {
+    func fetchGemini(prompt: String) async {
+        do {
+            let response = try await model.generateContent(prompt)
+            if let text = response.text {
                 DispatchQueue.main.async {
-                    self.storyText = "Error: \(error.localizedDescription)"
+                    self.storyText = text
                 }
+            } else {
+                DispatchQueue.main.async {
+                    self.storyText = "Failed to load Gemini."
+                }
+            }
+        } catch {
+            DispatchQueue.main.async {
+                self.storyText = "Error: \(error.localizedDescription)"
             }
         }
     }
 }
 
 
-let mousePrompt = "쥐띠의 오늘의 운세를 한 줄로 알려줘"
 
 
 struct HeaderView: View {
     @StateObject private var apiModel = APIModel()
     @AppStorage("geminiFortune") var geminiFortune: String = ""
+    @Binding var selectedImage: String
+//    @Binding var selectedImage_Kor: String
     
     var body: some View {
+        let prompt = "\(selectedImage) 띠의 오늘의 운세를 한 줄로 알려줘"
+        
         // 오늘의 운세 설명 부분
         Button(action: {
-            apiModel.fetchGemini(prompt: mousePrompt)
-            self.geminiFortune = apiModel.storyText
+            Task {
+                await apiModel.fetchGemini(prompt: prompt)
+                self.geminiFortune = apiModel.storyText
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }, label: {
             ZStack {
                 Rectangle()
                     .fill(.palePink)
                     .frame(height: 180)
                 VStack {
-                    Text("오늘의 운세")
+                    Text("🍀오늘의 운세🍀")
                         .font(.title)
                         .bold()
                         .padding(5)
@@ -74,15 +79,15 @@ struct HeaderView: View {
             }
         })
         .foregroundStyle(.black)
-        .onAppear {
-            apiModel.fetchGemini(prompt: mousePrompt)
+        .task {
+            await apiModel.fetchGemini(prompt: prompt)
         }
         
     }
 }
 
 
-
-#Preview {
-    HeaderView()
-}
+//
+//#Preview {
+//    HeaderView()
+//}

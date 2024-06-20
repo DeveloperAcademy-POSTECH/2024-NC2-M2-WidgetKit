@@ -17,33 +17,30 @@ Apple Developer Academy 3rd Morning Session NC2 Pair2(Soy&amp;Sora - SOSO)'s Wid
 
 ## 🖼️ Prototype
 
-위젯 이미지 (WidgetFamily: .systemSmall, .systemLarge / .systemMedium)
-</br>
+- 위젯 이미지 (WidgetFamily: .systemSmall, .systemLarge / .systemMedium)
 <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/f737efc0-a842-444b-bc95-de3ba8507d08" width = "200" height = "200"> | <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/8f416b35-6795-45b1-a1d0-7a6c9d2f1a2e" width = "200" height = "100">
----|---|
+
 </br>
 
 
-HeaderView : 오늘의 운세가 나타나는 View
+- HeaderView : 오늘의 운세가 나타나는 View
 </br>
 </br>
 <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/af7e6c6d-2518-44ac-8a98-554690500c4b" >
 </br>
 
 
-MainView : 어플에서 처음으로 나타나는 View
+- MainView : 어플에서 처음으로 나타나는 View
 </br>
 </br>
 <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/10f7f0ee-139d-42c5-ac5e-f9648c9c46f4" width = "300" height = "600">
 </br>
 
 
-Widget이 적용된 HomeScreen
+- Widget이 적용된 HomeScreen
 </br>
 </br>
 <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/e82979e3-4a59-4b99-9615-7a2b6afde110" width = "300" height = "600">
-
-
 
 
 
@@ -70,3 +67,10 @@ Button(intent: ToggleFortuneIntent()){
 Interactivity를 추가하기 위해선 AppIntent가 필요함. 
 AppIntent는 iOS가 필요할 때, 예를 들어 사용자가 위젯 버튼과 상호작용할 때 App 작업을 시스템에 노출하는 역할을 수행.
 해당 코드에서는 UserDefaults에 저장된 "isShowingFortune" 값을 불러오도록 하고, "isShowingFortune"의 값에 따라 Widget에서 오늘의 운세 또는 띠에 해당하는 이미지를 보이도록 함 
+
+
+
+## 👩‍💻 Contributor
+<img width="174" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/60ec9f50-f43a-434b-9c54-bf765cb546b3"> | <img src = "https://github.com/DeveloperAcademy-POSTECH/2024-NC2-M2-WidgetKit/assets/127467306/0b9a7b59-8e59-41ad-8540-4e4849f36db5" width = "200" height = "200">
+--|--|
+Soy|Sora

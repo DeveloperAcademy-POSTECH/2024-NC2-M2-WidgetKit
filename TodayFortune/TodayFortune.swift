@@ -66,7 +66,7 @@ struct TodayFortuneEntryView : View {
     
     @Environment(\.widgetFamily) var widgetFamily
     
-        
+    
     var body: some View {
         
         switch widgetFamily {
@@ -79,31 +79,42 @@ struct TodayFortuneEntryView : View {
                     VStack {
                         if !entry.isShowingFortune {
                             if entry.imageName == "mouse" {
-                                Image("3D_Mouse")
-                                    .resizable()
-                                    .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
+                                ZStack {
+                                    Image("mouse_widget")
+                                    
+                                    Image("3D_Mouse")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding()
+                                }
+                                
                             } else if entry.imageName == "rabbit" {
-                                Image("3D_Rabbit")
-                                    .resizable()
-                                    .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
+                                ZStack {
+                                    Image("rabbit_widget")
+                                    
+                                    
+                                    Image("3D_Rabbit")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding()
+                                }
                             }
                             else {
                                 Image(entry.imageName)
                                     .resizable()
                                     .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
                             }
                         } else {
-                            Text(entry.geminiFortune)
-                                .fontWeight(.thin)
-                                .font(.footnote)
-                                .foregroundStyle(.black)
-                                .multilineTextAlignment(.center)
+                            ZStack {
+                                Image("rabbit_widget")
+
+                                Text(entry.geminiFortune)
+                                    .fontWeight(.thin)
+                                    .font(.footnote)
+                                    .foregroundStyle(.black)
+                                    .multilineTextAlignment(.center)
+                                
+                            }
                         }
                     }
                 }
@@ -120,31 +131,43 @@ struct TodayFortuneEntryView : View {
                     VStack {
                         if !entry.isShowingFortune {
                             if entry.imageName == "mouse" {
-                                Image("3D_Mouse")
-                                    .resizable()
-                                    .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
+                                ZStack {
+                                    Image("mouse_long_widget")
+                                    
+                                    Image("3D_Mouse")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding()
+                                }
+                                
                             } else if entry.imageName == "rabbit" {
-                                Image("3D_Rabbit")
-                                    .resizable()
-                                    .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
+                                ZStack {
+                                    Image("rabbit_long_widget")
+                                    
+                                    Image("3D_Rabbit")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding()
+                                }
+                                
                             }
                             else {
                                 Image(entry.imageName)
                                     .resizable()
                                     .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
+                                
                             }
                         } else {
-                            Text(entry.geminiFortune)
-                                .fontWeight(.thin)
-                                .font(.title3)
-                                .foregroundStyle(.black)
-                                .multilineTextAlignment(.center)
+                            ZStack {
+                                Image("rabbit_long_widget")
+
+                                Text(entry.geminiFortune)
+                                    .fontWeight(.thin)
+                                    .font(.title3)
+                                    .foregroundStyle(.black)
+                                    .multilineTextAlignment(.center)
+                            }
+                            
                         }
                     }
                     
@@ -162,33 +185,49 @@ struct TodayFortuneEntryView : View {
                     VStack {
                         if !entry.isShowingFortune {
                             if entry.imageName == "mouse" {
-                                Image("3D_Mouse")
-                                    .resizable()
-                                    .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
+                                ZStack {
+                                    Image("mouse_widget")
+                                        .resizable()
+//                                        .scaledToFit()
+                                    
+                                    Image("3D_Mouse")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding()
+                                }
+                                
                             } else if entry.imageName == "rabbit" {
-                                Image("3D_Rabbit")
-                                    .resizable()
-                                    .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
+                                ZStack {
+                                    Image("rabbit_widget")
+                                        .resizable()
+//                                        .scaledToFit()
+                                    
+                                    Image("3D_Rabbit")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding()
+                                }
                             }
                             else {
                                 Image(entry.imageName)
                                     .resizable()
                                     .scaledToFit()
-                                Text(entry.selectedImage_Kor)
-                                    .font(.headline)
                             }
                         } else {
-                            Text(entry.geminiFortune)
-                                .fontWeight(.thin)
-                                .font(.title2)
-                                .foregroundStyle(.black)
-                                .multilineTextAlignment(.center)
+                            
+                            ZStack {
+                                Image("rabbit_widget")
+                                    .resizable()
+//                                    .scaledToFit()
+                                Text(entry.geminiFortune)
+                                    .fontWeight(.thin)
+                                    .font(.title2)
+                                    .foregroundStyle(.black)
+                                    .multilineTextAlignment(.center)
+                            }
+                            
                         }
-
+                        
                     }
                 }
                 .buttonStyle(PlainButtonStyle())

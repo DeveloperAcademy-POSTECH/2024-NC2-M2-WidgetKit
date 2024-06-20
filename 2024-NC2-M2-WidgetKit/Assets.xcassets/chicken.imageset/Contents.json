@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "chicken.jpg",
+      "filename" : "chicken.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "chicken_2.jpg",
+      "filename" : "chicken_2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "chicken_3.jpg",
+      "filename" : "chicken_3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

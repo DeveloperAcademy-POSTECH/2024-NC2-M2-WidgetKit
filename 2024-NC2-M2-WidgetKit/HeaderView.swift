@@ -66,8 +66,9 @@ struct HeaderView: View {
         }, label: {
             ZStack {
                 Rectangle()
-                    .fill(.palePink)
+                    .fill(.white)
                     .frame(height: 180)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
                 VStack {
                     Text("🍀오늘의 운세🍀")
                         .font(.title)
@@ -78,11 +79,11 @@ struct HeaderView: View {
                 }
             }
         })
-        .foregroundStyle(.black)
+        .foregroundStyle(Color.colorForText)
         .task {
             await apiModel.fetchGemini(prompt: prompt)
         }
-        
+        .padding()
     }
 }
 

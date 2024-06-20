@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "mouse.jpg",
+      "filename" : "mouse.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "mouse_2.jpg",
+      "filename" : "mouse_2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "mouse_3.jpg",
+      "filename" : "mouse_3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

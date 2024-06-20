@@ -25,46 +25,61 @@ struct MainView: View {
     
     var body: some View {
         ScrollView {
-            VStack{
+            ZStack {
+                Image("background")
+                    .resizable()
+                    .scaledToFit()
+//                    .frame(width: 500)
+//                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                    
                 
-                HeaderView(selectedImage: $selectedImage)
-                
-                ZStack {
-                    // 십이간지가 그려진 버튼
-                    VStack {
-                        ForEach(0 ..< 4) { height in
-                            HStack {
-                                ForEach(0 ..< 3) { width in
-                                    Button(action: {
-                                        self.selectedImage = imageName[height][width]
-                                        self.selectedImage_Kor = imageName_Kor[height][width]
-                                        self.showToast = true
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                            self.showToast = false
-                                        }
-                                        WidgetCenter.shared.reloadAllTimelines()
-                                    }, label: {
-                                        VStack {
-                                            Image(imageName[height][width])
-                                                .resizable()
-                                                .frame(width: 100, height: 100)
-                                            Text("\(imageName_Kor[height][width])")
-                                        }
-                                    })
-                                    .foregroundStyle(.black)
+                VStack{
+                    
+                    HeaderView(selectedImage: $selectedImage)
+                    
+                    ZStack {
+                        // 십이간지가 그려진 버튼
+                        VStack {
+                            ForEach(0 ..< 4) { height in
+                                HStack {
+                                    ForEach(0 ..< 3) { width in
+                                        Button(action: {
+                                            self.selectedImage = imageName[height][width]
+                                            self.selectedImage_Kor = imageName_Kor[height][width]
+                                            self.showToast = true
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                                self.showToast = false
+                                            }
+                                            WidgetCenter.shared.reloadAllTimelines()
+                                        }, label: {
+                                            VStack {
+                                                Image(imageName[height][width])
+                                                    .resizable()
+                                                    .frame(width: 100, height: 100)
+                                                Text("\(imageName_Kor[height][width])")
+                                            }
+                                        })
+                                        .foregroundStyle(Color.colorForText)
+                                        .bold()
+                                    }
                                 }
+                                
                             }
-                            
+                        }
+                        if showToast {
+                            ToastView(message: "해당 띠가 적용되었습니다")
+                                .transition(.slide)
+                                .animation(.easeInOut(duration: 0.5), value: isAnimating)
                         }
                     }
-                    if showToast {
-                        ToastView(message: "해당 띠가 적용되었습니다")
-                            .transition(.slide)
-                            .animation(.easeInOut(duration: 0.5), value: isAnimating)
-                    }
+                    .scaledToFit()
                 }
+                
             }
+
         }
+        .background(Color.palePink)
+        .ignoresSafeArea()
     }
 }
 

@@ -20,7 +20,6 @@ struct Provider: AppIntentTimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            //            let imageName = UserDefaults(suiteName: "group.com.soy.TodayFortune")?.string(forKey: "selectedImage") ?? "placeholder"
             let entry = SimpleEntry(date: entryDate, configuration: configuration, imageName: getSelectedImage(), selectedImage_Kor: getSelectedImage_Kor(), geminiFortune: getGeminiFortune(), isShowingFortune: isShowingFortune())
             entries.append(entry)
         }
@@ -188,7 +187,6 @@ struct TodayFortuneEntryView : View {
                                 ZStack {
                                     Image("mouse_widget")
                                         .resizable()
-//                                        .scaledToFit()
                                     
                                     Image("3D_Mouse")
                                         .resizable()
@@ -218,7 +216,7 @@ struct TodayFortuneEntryView : View {
                             ZStack {
                                 Image("rabbit_widget")
                                     .resizable()
-//                                    .scaledToFit()
+
                                 Text(entry.geminiFortune)
                                     .fontWeight(.thin)
                                     .font(.title2)
@@ -244,7 +242,6 @@ struct TodayFortune: Widget {
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             TodayFortuneEntryView(entry: entry)
-            //                .containerBackground(.fill.tertiary, for: .widget)
         }
         .contentMarginsDisabled()
     }
@@ -264,23 +261,3 @@ struct ToggleFortuneIntent: AppIntent {
     }
 }
 
-//extension ConfigurationAppIntent {
-//    fileprivate static var smiley: ConfigurationAppIntent {
-//        let intent = ConfigurationAppIntent()
-//        intent.favoriteEmoji = "😀"
-//        return intent
-//    }
-//
-//    fileprivate static var starEyes: ConfigurationAppIntent {
-//        let intent = ConfigurationAppIntent()
-//        intent.favoriteEmoji = "🤩"
-//        return intent
-//    }
-//}
-
-//#Preview(as: .systemSmall) {
-//    TodayFortune()
-//} timeline: {
-//    SimpleEntry(date: .now, configuration: .smiley, imageName: "mouse")
-//    SimpleEntry(date: .now, configuration: .starEyes, imageName: "cow")
-//}

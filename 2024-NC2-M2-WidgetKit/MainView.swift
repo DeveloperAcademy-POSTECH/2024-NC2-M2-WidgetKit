@@ -29,9 +29,7 @@ struct MainView: View {
                 Image("background")
                     .resizable()
                     .scaledToFit()
-//                    .frame(width: 500)
-//                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                    
+
                 
                 VStack{
                     
@@ -103,14 +101,6 @@ struct ToastView: View {
             .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
     }
 }
-
-//extension UserDefaults {
-//    static var shared: UserDefaults {
-//        let appGroupId = "group.com.soy.TodayFortune"
-//        return UserDefaults(suiteName: appGroupId)!
-//    }
-//}
-
 
 
 #Preview {

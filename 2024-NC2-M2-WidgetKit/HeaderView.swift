@@ -51,10 +51,9 @@ struct HeaderView: View {
     @StateObject private var apiModel = APIModel()
     @AppStorage("geminiFortune") var geminiFortune: String = ""
     @Binding var selectedImage: String
-//    @Binding var selectedImage_Kor: String
     
     var body: some View {
-        let prompt = "\(selectedImage) 띠의 오늘의 운세를 한 줄로 알려줘"
+        let prompt = "\(selectedImage) 띠의 오늘의 운세를 한 줄로 알려줘. 좋은 운세 문장과 나쁜 운세 문장이 70:30의 비율로 랜덤하게 나타나도록 해줘. 그리고 이전 운세와 비슷한 문장은 최대한 피해줘. 무슨 띠의 운세인지가 문장의 주어가 되도록 해줘"
         
         // 오늘의 운세 설명 부분
         Button(action: {
@@ -86,9 +85,3 @@ struct HeaderView: View {
         .padding()
     }
 }
-
-
-//
-//#Preview {
-//    HeaderView()
-//}

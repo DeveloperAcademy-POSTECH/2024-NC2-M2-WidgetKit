@@ -1,9 +1,3 @@
-//
-//  TodayFortuneLiveActivity.swift
-//  TodayFortune
-//
-//  Created by 이소현 on 6/17/24.
-//
 
 import ActivityKit
 import WidgetKit
